@@ -86,4 +86,7 @@
   <ItemGroup>
     <RefactorLog Include="DBPOSManagement.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DBPOSManagement.publish.xml" />
+  </ItemGroup>
 </Project>
