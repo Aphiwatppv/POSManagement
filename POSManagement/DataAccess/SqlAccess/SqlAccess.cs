@@ -32,9 +32,6 @@ public class SqlAccess : ISqlAccess
         }
     }
 
-
-
-
     /// <summary>
     /// Asynchronously loads data from the database using a stored procedure.
     /// </summary>

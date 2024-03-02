@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using System;
+
 namespace POSManagement
 {
     internal static class Program
@@ -8,10 +11,22 @@ namespace POSManagement
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Main());
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var mainForm = serviceProvider.GetRequiredService<Main>();
+                Application.Run(mainForm);
+            }
+        }
+
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            // Add your services here
+            services.AddTransient<IMainStoreAccess, MainStoreAccess>();
+            services.AddTransient<ISqlAccess, SqlAccess>(); // Assuming SqlAccess also has its dependencies
+            services.AddTransient<Main>(); // Your WinForms main form
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DataAccess.SqlAccess
 
         public XmlAccess()
         {
-            CreateXmlFileIfNotExists("Please Enter Connection string");
+            CreateXmlFileIfNotExists("Data Source=APHIWAT;Initial Catalog=POSManamgentDB;Integrated Security=True;Connect Timeout=60;Encrypt=False");
 
         }
 

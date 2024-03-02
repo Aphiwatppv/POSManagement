@@ -65,7 +65,7 @@
     <Build Include="dbo\Tables\ChecktStockTB.sql" />
     <Build Include="dbo\Tables\CarTable.sql" />
     <Build Include="dbo\Tables\Employee.sql" />
-    <Build Include="dbo\StoredProcedures\spGetAllProducts.sql" />
+    <Build Include="dbo\StoredProcedures\uspGetAllProducts.sql" />
     <Build Include="dbo\StoredProcedures\uspAddNewProduct.sql" />
     <Build Include="dbo\StoredProcedures\uspIncreaseStock.sql" />
     <Build Include="dbo\StoredProcedures\uspDecreaseStock.sql" />
